@@ -64,10 +64,6 @@ $events = array();
 
 foreach ($consolids as $consolid){
 $split = explode(" ", strip_tags($consolid), 2);
-
-#str_replace(":","",$split[0]);
-#preg_match($year,$consolid,$key);
-#print_r($key);
 $events[] = array('year' => $split[0], 'event' => $split[1]);
 }
 
@@ -79,7 +75,7 @@ echo "<li><b>" . $event['year'] . "</b> " . $event['event']  . "</li>";
 }
 echo "</ul>";
 
+echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
 
-# echo json_encode($events);
 
 ?>
