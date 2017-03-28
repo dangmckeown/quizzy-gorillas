@@ -41,11 +41,11 @@ $preg_url = "/".$month."\/.*".$day."\.htm/";
 preg_match($preg_url, $brit_base, $today_url);
 
 if(! $today_url[0]){
-echo "ERROR getting URL!";
+echo "ERROR getting Beautiful Britain URL! <a href='http://www.beautifulbritain.co.uk/htm/onthisday/onthisday.htm'>Go to the site</a>";
 }
 else
 {
-echo $today_url[0];
+$brits = file_get_contents('http://www.beautifulbritain.co.uk/htm/onthisday/' . $today_url[0]);
 }
 
 //=== Trim Wiki Output
