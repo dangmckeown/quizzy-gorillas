@@ -28,15 +28,15 @@ $bbc_trim[] = trim(str_replace(":","",strip_tags($bb)));
 
 //== Get Beautiful Britain after site rejig
 
-# $brits = file_get_contents('http://www.beautifulbritain.co.uk/htm/onthisday/current/'.$day.'.htm');
+$brits = file_get_contents('http://www.beautifulbritain.co.uk/htm/onthisday/current/'.$day.'.htm');
 
-$brit_base = file_get_contents("http://www.beautifulbritain.co.uk/htm/onthisday/onthisday.htm");
+#$brit_base = file_get_contents("http://www.beautifulbritain.co.uk/htm/onthisday/onthisday.htm");
 
 $today_url = array();
 
 $brits = file_get_contents('http://www.beautifulbritain.co.uk/htm/onthisday/current/'.$day.'.htm');
 
-$preg_url = "/".$month."\/.*".$day."\.htm/"
+$preg_url = "/".$month."\/.*".$day."\.htm/";
 
 preg_match($preg_url, $brit_base, $today_url);
 
