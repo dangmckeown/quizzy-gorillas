@@ -36,7 +36,14 @@ $preg_url = "/".$month."\/.*".$day."\.htm/"
 
 preg_match($preg_url, $brit_base, $today_url);
 
-var_dump($today_url);
+if(! $today_url[0]){
+echo "ERROR getting URL!";
+}
+else
+{
+echo $today_url[0];
+}
+
 
 //=== Trim Wiki Output
 
