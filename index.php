@@ -28,8 +28,6 @@ foreach ($string_arr as $sar){
 	
 array_splice($string_arr, $index, 0, " ");	
 
-#	var_dump($string_arr);
-	
 	$output = implode($string_arr);
 	
 	return $output;
@@ -109,7 +107,7 @@ foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
-$consolids[] = format_date($source[$i]);
+$consolids[] = str_replace("&nbsp;"," ", format_date($source[$i]));
 $i++;
 }
 
