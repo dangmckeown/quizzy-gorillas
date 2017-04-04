@@ -146,16 +146,18 @@ $events[] = array('year' => $split[0], 'event' => $split[1]);
 
 rsort($bc_events);
 
+/*
 echo "<p>BC events</p>";
 
 var_dump($bc_events);
+*/
 
 sort($events);
-
+/*
 echo "<p>Events</p>";
 
 var_dump($events);
-
+*/
  echo "<ul>";
 
       
