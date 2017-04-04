@@ -125,14 +125,15 @@ $bc_events = array();
 
 foreach ($consolids as $consolid){
 	
-# $split = explode(" ", strip_tags($consolid), 2); 
-$split = str_split($consolid);
+$split = explode(" ", strip_tags($consolid), 2); 
+
+	/* $split = str_split($consolid);
 array_splice($split, 1, 1);
 
 for ($i = 2; $i < count($split); $i++){
 $split[1] += $split[$i];
 unset($split[$i]);
-}	
+}	*/
 	
 	
  if(preg_match($bc, $split[1])){
