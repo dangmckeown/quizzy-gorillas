@@ -126,7 +126,7 @@ foreach ($consolids as $consolid){
 $split = explode(" ", strip_tags($consolid), 2); 
 
 
-$year = explode(" ", $split[0]);
+$year = explode("&nbsp;", $split[0]);
 while (count($year) > 1){
 $extra = array_pop($year);
 $split[1] = $extra . " " . $split[1];
