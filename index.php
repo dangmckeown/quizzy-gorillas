@@ -1,5 +1,42 @@
 <?php
 
+//Begin formatting function
+
+function format_date($string){
+
+$reg = "/^\d\d?\d?\d?\w/";
+
+$result = preg_match($reg, $string);
+
+$string_arr = str_split($string);
+
+	#var_dump($string_arr);
+
+$num = "/\d/";
+
+$index = 0;
+
+foreach ($string_arr as $sar){
+	if (! preg_match($num,$sar)){
+	break;
+	}	
+	else
+	{
+	$index++;
+	}
+}
+	
+array_splice($string_arr, $index, 0, " ");	
+
+#	var_dump($string_arr);
+	
+	$output = implode($string_arr);
+	
+	return $output;
+}
+
+// End formatting function
+
 $day = date('j');
 
 $month = date('F');
@@ -72,7 +109,7 @@ foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
-$consolids[] = $source[$i];
+$consolids[] = format_date($source[$i]);
 $i++;
 }
 
@@ -80,16 +117,34 @@ $i++;
 
 $year = "/^\d{1,4}/";
 
+$bc = "/^B\.?C\.?/i";
+
 $events = array();
 
+$bc_events = array();
+
 foreach ($consolids as $consolid){
-$split = explode(" ", strip_tags($consolid), 2);
+$split = explode(" ", strip_tags($consolid), 2); 
+ 
+if(preg_match($bc, $split[1]){
+$bc_events[] = array('year' => $split[0], 'event' => $split[1]);
+}
+else{
 $events[] = array('year' => $split[0], 'event' => $split[1]);
 }
+}
 
+rsort($bc_events);
 sort($events);
 
  echo "<ul>";
+
+      
+foreach ($bc_events as $event){
+echo "<li><b>" . $event['year'] . "</b> " . $event['event']  . "</li>";
+}
+
+   
 foreach ($events as $event){
 echo "<li><b>" . $event['year'] . "</b> " . $event['event']  . "</li>";
 }
