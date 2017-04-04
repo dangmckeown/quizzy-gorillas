@@ -107,7 +107,7 @@ foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
-$consolids[] = str_replace("&nbsp;"," ", format_date($source[$i]));
+$consolids[] = trim(format_date($source[$i]));
 $i++;
 }
 
