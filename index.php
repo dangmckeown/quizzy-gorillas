@@ -126,13 +126,15 @@ $bc_events = array();
 foreach ($consolids as $consolid){
 $split = explode(" ", strip_tags($consolid), 2); 
  
-if(preg_match($bc, $split[1]){
+/* if(preg_match($bc, $split[1]){
 $bc_events[] = array('year' => $split[0], 'event' => $split[1]);
 }
-else{
+else
+{*/
 $events[] = array('year' => $split[0], 'event' => $split[1]);
-}
-}
+#}
+
+   }
 
 rsort($bc_events);
 sort($events);
