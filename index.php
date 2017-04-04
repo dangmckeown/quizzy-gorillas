@@ -125,14 +125,14 @@ foreach ($consolids as $consolid){
 	
 $split = explode(" ", strip_tags($consolid), 2); 
 
-	/* $split = str_split($consolid);
-array_splice($split, 1, 1);
 
-for ($i = 2; $i < count($split); $i++){
-$split[1] += $split[$i];
-unset($split[$i]);
-}	*/
-	
+$year = explode(" ", $split[0]);
+while (count($year) > 1){
+$extra = array_pop($year);
+$split[1] = $extra . " " . $split[1];
+}
+
+$split[0] = $year[0];	
 	
  if(preg_match($bc, $split[1])){
 $bc_events[] = array('year' => $split[0], 'event' => $split[1]);
