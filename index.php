@@ -30,7 +30,7 @@ array_splice($string_arr, $index, 0, " ");
 
 	$output = implode($string_arr);
 	
-	return $output;
+	return ltrim($output);
 }
 
 // End formatting function
@@ -107,7 +107,7 @@ foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
-$consolids[] = trim(format_date($source[$i]));
+$consolids[] = format_date($source[$i]);
 $i++;
 }
 
