@@ -130,7 +130,7 @@ $split = explode(" ", strip_tags($consolid), 2);
 $bc_events[] = array('year' => $split[0], 'event' => $split[1]);
 }
 else
-{*/
+{
 $events[] = array('year' => $split[0], 'event' => $split[1]);
 }
 
