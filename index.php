@@ -165,18 +165,18 @@ echo "<p>Events</p>";
 
 var_dump($events);
 */
- echo "<ul>";
+ echo "<table>";
 
       
 foreach ($bc_events as $event){
-echo "<li><b>" . $event['year'] . "</b> " . $event['event']  . "</li>";
+echo "<tr><td>" . $event['year'] . "</td><td> " . $event['event']  . "</tr>";
 }
 
    
 foreach ($events as $event){
-echo "<li><b>" . $event['year'] . "</b> " . $event['event']  . "</li>";
+echo "<tr><td>" . $event['year'] . "</td><td>" . $event['event']  . "</td></tr>";
 }
-echo "</ul>";
+echo "</table>";
 
 echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
 
