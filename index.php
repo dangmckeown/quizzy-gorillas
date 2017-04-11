@@ -114,6 +114,9 @@ $i++;
 
 } //end foreach
 
+echo "CONSOLIDS:";
+var_dump($consolids);
+
 $bc = "/^B\.?C\.?/i";
 
 $events = array();
