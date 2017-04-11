@@ -127,6 +127,9 @@ $bc_events = array();
 
 foreach ($consolids as $consolid){
 	
+$consolid = str_replace("&nbsp;"," ",$consolid);
+$consolid = str_replace("  "," ",$consolid);
+$consolid = str_replace("  "," ",$consolid);
 $split = explode(" ", strip_tags($consolid), 2); 
 
 //get rid of leading whitespace
