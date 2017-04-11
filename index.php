@@ -125,7 +125,10 @@ foreach ($consolids as $consolid){
 	
 $split = explode(" ", strip_tags($consolid), 2); 
 
-
+//get rid of leading whitespace
+$split[0] = ltrim($split[0]);
+	
+	
 $year = explode("&nbsp;", $split[0]);
 while (count($year) > 1){
 $extra = array_pop($year);
