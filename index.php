@@ -1,7 +1,7 @@
 <?php
 
 //Begin formatting function
-
+/*
 function format_date($string){
 	
 $string = strip_tags($string);
@@ -11,8 +11,6 @@ $reg = "/^\d\d?\d?\d?\w/";
 $result = preg_match($reg, $string);
 
 $string_arr = str_split($string);
-
-	#var_dump($string_arr);
 
 $num = "/\d/";
 
@@ -35,6 +33,7 @@ array_splice($string_arr, $index, 0, " ");
 	
 	return ltrim($output);
 }	// End formatting function
+*/
 
 $day = date('j');
 
@@ -63,8 +62,6 @@ $bbc_trim[] = trim(str_replace(":","",strip_tags($bb)));
 } //end foreach bbs
 
 //== Get Beautiful Britain after site rejig
-
-#$brits = file_get_contents('http://www.beautifulbritain.co.uk/htm/onthisday/current/'.$day.'.htm');
 
 $brit_base = file_get_contents("http://www.beautifulbritain.co.uk/htm/onthisday/onthisday.htm");
 
@@ -114,9 +111,6 @@ $i++;
 
 } //end foreach
 
-echo "CONSOLIDS:";
-var_dump($consolids);
-
 $bc = "/^B\.?C\.?/i";
 
 $events = array();
@@ -143,8 +137,6 @@ if ($year && preg_match("/\d/",$textarr[$i])){
 } //end else number
 
 } //end for i
-	
-	var_dump($split);
 	
 if(preg_match($bc, $split[1])){
 $bc_events[] = array('year' => $split[0], 'event' => trim($split[1]));
