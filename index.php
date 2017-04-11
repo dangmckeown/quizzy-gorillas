@@ -124,20 +124,22 @@ $events = array();
 $bc_events = array();
 
 foreach ($consolids as $consolid){
-var_dump($consolid);	
-$split=array();	
+
+$split=array();
+	
 $textarr = str_split($consolid);
+
 $year = True;
 
 for($i = 0;$i < count($textarr);$i++){
 
-if ($year && preg_match("/\d/",$textarr($i))){
-	$split[0] .= $textarr($i);
+if ($year && preg_match("/\d/",$textarr[$i])){
+	$split[0] .= $textarr[$i];
 } //end if
  else
     {
 	$year = False;
-		$split[1] .= $textarr($i);
+		$split[1] .= $textarr[$i];
 } //end else number
 
 } //end for i
