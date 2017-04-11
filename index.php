@@ -128,7 +128,7 @@ $year = True;
 
 for($i = 0;$i < count($textarr);$i++){
 
-if ($year && preg_match("/\d/",$textarr($i)){
+if ($year && preg_match("/\d/",$textarr($i))){
 	$split[0] .= $textarr($i);
 } //end if
  else
