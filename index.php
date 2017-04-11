@@ -136,7 +136,7 @@ $split = explode(" ", strip_tags($consolid), 2);
 $split[0] = ltrim($split[0]);
 	
 	
-$year = explode("&nbsp;", $split[0]);
+$year = explode(" ", $split[0]);
 
 $extra = $year[1];
 
