@@ -19,25 +19,22 @@ $num = "/\d/";
 $index = 0;
 
 foreach ($string_arr as $sar){
+
 	if (! preg_match($num,$sar)){
 	break;
-	}	
+	} //end if	
 	else
 	{
 	$index++;
-	}
-}
+	} //end else
+} //end foreach
 	
 array_splice($string_arr, $index, 0, " ");	
 
 	$output = implode($string_arr);
 	
-	echo $output;
-	
 	return ltrim($output);
-}
-
-// End formatting function
+}	// End formatting function
 
 $day = date('j');
 
@@ -61,9 +58,9 @@ foreach ($bbs as $bb){
 
 if (preg_match($regex,$bb)){
 $bbc_trim[] = trim(str_replace(":","",strip_tags($bb)));
-}
+} //end if preg_match
 
-}
+} //end foreach bbs
 
 //== Get Beautiful Britain after site rejig
 
@@ -113,11 +110,9 @@ $i = 1;
 while($i < count($source) - 1){
 $consolids[] = $source[$i];
 $i++;
-}
+} //end while i
 
-}
-
-$year = "/^\d{1,4}/";
+} //end foreach
 
 $bc = "/^B\.?C\.?/i";
 
@@ -126,55 +121,51 @@ $events = array();
 $bc_events = array();
 
 foreach ($consolids as $consolid){
+var_dump($consolid);	
 $split=array();	
 $textarr = str_split($consolid);
 $year = True;
+
 for($i = 0;$i < count($textarr);$i++){
+
 if ($year && preg_match("/\d/",$textarr($i)){
 	$split[0] .= $textarr($i);
-}
+} //end if
  else
     {
 	$year = False;
 		$split[1] .= $textarr($i);
-}
-}
+} //end else number
+
+} //end for i
 	
- if(preg_match($bc, $split[1])){
+if(preg_match($bc, $split[1])){
 $bc_events[] = array('year' => $split[0], 'event' => trim($split[1]));
-}
+} //end if BC
+    
 else
 {
 $events[] = array('year' => $split[0], 'event' => $split[1]);
-}
+} //end if else BC
 
-   }
+} //end foreach consolids
 
 rsort($bc_events);
 
-/*
-echo "<p>BC events</p>";
-
-var_dump($bc_events);
-*/
 
 sort($events);
-/*
-echo "<p>Events</p>";
 
-var_dump($events);
-*/
  echo "<table>";
 
       
 foreach ($bc_events as $event){
 echo "<tr><td>" . $event['year'] . "</td><td> " . $event['event']  . "</tr>";
-}
+} //end foreach bc_events
 
    
 foreach ($events as $event){
 echo "<tr><td>" . $event['year'] . "</td><td>" . $event['event']  . "</td></tr>";
-}
+} //end foreach events
 echo "</table>";
 
 echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
