@@ -1,40 +1,5 @@
 <?php
 
-//Begin formatting function
-/*
-function format_date($string){
-	
-$string = strip_tags($string);
-
-$reg = "/^\d\d?\d?\d?\w/";
-
-$result = preg_match($reg, $string);
-
-$string_arr = str_split($string);
-
-$num = "/\d/";
-
-$index = 0;
-
-foreach ($string_arr as $sar){
-
-	if (! preg_match($num,$sar)){
-	break;
-	} //end if	
-	else
-	{
-	$index++;
-	} //end else
-} //end foreach
-	
-array_splice($string_arr, $index, 0, " ");	
-
-	$output = implode($string_arr);
-	
-	return ltrim($output);
-}	// End formatting function
-*/
-
 $day = date('j');
 
 $month = date('F');
@@ -154,18 +119,18 @@ rsort($bc_events);
 
 sort($events);
 
- echo "<table>";
+ echo "<ul>";
 
       
 foreach ($bc_events as $event){
-echo "<tr><td>" . $event['year'] . "</td><td> " . $event['event']  . "</tr>";
+echo "<lu>" . $event['year'] . ": " . $event['event']  . "</li>";
 } //end foreach bc_events
 
    
 foreach ($events as $event){
-echo "<tr><td>" . $event['year'] . "</td><td>" . $event['event']  . "</td></tr>";
+echo "<li>" . $event['year'] . ": " . $event['event']  . "</li>";
 } //end foreach events
-echo "</table>";
+echo "</ul>";
 
 echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
 
