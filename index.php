@@ -111,7 +111,7 @@ foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
-$consolids[] = format_date($source[$i]);
+$consolids[] = $source[$i];
 $i++;
 }
 
@@ -126,33 +126,22 @@ $events = array();
 $bc_events = array();
 
 foreach ($consolids as $consolid){
-	
-$consolid = str_replace("&nbsp;"," ",$consolid);
-$consolid = str_replace("  "," ",$consolid);
-$consolid = str_replace("  "," ",$consolid);
-$split = explode(" ", strip_tags($consolid), 2); 
-
-//get rid of leading whitespace
-$split[0] = ltrim($split[0]);
-	
-	
-$year = explode(" ", $split[0]);
-
-$extra = $year[1];
-
-if( $extra ){
-echo "<p>Found extra!</p>";
-$split[1] = $extra . " " . $split[1];
+$split=array();	
+$textarr = str_split($consolid);
+$year = True;
+for($i = 0;$i < count($textarr);$i++){
+if ($year && preg_match("/\d/",$textarr($i)){
+	$split[0] .= $textarr($i);
 }
-else
-{
-$split[0] = rtrim($split[0],"&nbsp;");
+ else
+    {
+	$year = False;
+		$split[1] .= $textarr($i);
 }
-
-$split[0] = $year[0];	
+}
 	
  if(preg_match($bc, $split[1])){
-$bc_events[] = array('year' => $split[0], 'event' => $split[1]);
+$bc_events[] = array('year' => $split[0], 'event' => trim($split[1]));
 }
 else
 {
