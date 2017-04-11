@@ -3,6 +3,8 @@
 //Begin formatting function
 
 function format_date($string){
+	
+$string = strip_tags($string);
 
 $reg = "/^\d\d?\d?\d?\w/";
 
