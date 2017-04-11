@@ -30,6 +30,8 @@ array_splice($string_arr, $index, 0, " ");
 
 	$output = implode($string_arr);
 	
+	echo $output;
+	
 	return ltrim($output);
 }
 
