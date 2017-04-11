@@ -134,9 +134,16 @@ $split[0] = ltrim($split[0]);
 	
 	
 $year = explode("&nbsp;", $split[0]);
-while (count($year) > 1){
-$extra = array_pop($year);
+
+$extra = $year[1];
+
+if( $extra ){
+echo "<p>Found extra!</p>";
 $split[1] = $extra . " " . $split[1];
+}
+else
+{
+$split[0] = rtrim($split[0],"&nbsp;");
 }
 
 $split[0] = $year[0];	
