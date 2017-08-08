@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Quizzy Gorillas - for when you absolutely *positively* need to know what happened on this day in history</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+	
 <?php
 
 $day = date('j');
@@ -136,3 +145,4 @@ echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
 
 
 ?>
+	</body></html>
