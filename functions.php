@@ -71,6 +71,9 @@ else
 
 {
 
+//See if this introduces more randomness into the questions...	
+shuffle($questions);
+	
 $keys = array_rand($questions,$n);
 
 $i = 0;
