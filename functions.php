@@ -9,6 +9,7 @@ $poss = 0;
 echo "<form method='post' action='marking.php'>";
 foreach ($quiz as $q){
 $poss++;
+var_dump($q);
 echo "<p>";
 $qid=$q->question;
 
