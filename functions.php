@@ -2,7 +2,9 @@
 
 function print_quiz($quiz){
 
-//renders slected questions onto web form
+//renders selected questions onto web form
+	
+shuffle($quiz);
 
 $poss = 0;
 
@@ -75,7 +77,7 @@ else
 //See if this introduces more randomness into the questions...	
 	
 #	var_dump($questions);
-shuffle($questions);
+# shuffle($questions);
 // ^this is what's messing it up	
 #	var_dump($questions);
 	
