@@ -73,10 +73,17 @@ else
 {
 
 //See if this introduces more randomness into the questions...	
+	
+	var_dump($questions);
 shuffle($questions);
+	
+	var_dump($questions);
 	
 $keys = array_rand($questions,$n);
 
+	
+	var_dump($questions);
+	
 $i = 0;
 
 foreach ($keys as $j){
