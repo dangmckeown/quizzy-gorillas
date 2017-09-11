@@ -74,25 +74,27 @@ else
 
 //See if this introduces more randomness into the questions...	
 	
-	var_dump($questions);
+#	var_dump($questions);
 shuffle($questions);
-	
-	var_dump($questions);
+// ^this is what's messing it up	
+#	var_dump($questions);
 	
 $keys = array_rand($questions,$n);
+	
+	var_dump($keys);
 
 	
-	var_dump($questions);
+#	var_dump($questions);
 	
 $i = 0;
 
-foreach ($keys as $j){
+foreach ($keys as $k){
 $quiz[$i] = new Question;
-$quiz[$i]->question = $j;
-$quiz[$i]->text = $questions[$j][0];
-$quiz[$i]->correct = $questions[$j][1];
-$quiz[$i]->wrong = $questions[$j][2];
-$quiz[$i]->false = $questions[$j][3];
+$quiz[$i]->question = $k;
+$quiz[$i]->text = $questions[$k][0];
+$quiz[$i]->correct = $questions[$k][1];
+$quiz[$i]->wrong = $questions[$k][2];
+$quiz[$i]->false = $questions[$k][3];
 $i++;
 }
 
