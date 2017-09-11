@@ -34,7 +34,7 @@ echo "</p>";
 
 echo "<p>You scored $total_score out of $possible_score</p>";
 
-echo "<p><a href=\"index.php\">Give me another go</a></p>";
+echo "<p><a href=\"quiz.php\">Give me another go</a></p>";
 
 ?>
 
