@@ -11,7 +11,6 @@ $poss = 0;
 echo "<form method='post' action='marking.php'>";
 foreach ($quiz as $q){
 $poss++;
-var_dump($q);
 echo "<p>";
 $qid=$q->question;
 
@@ -74,19 +73,9 @@ else
 
 {
 
-//See if this introduces more randomness into the questions...	
-	
-#	var_dump($questions);
-# shuffle($questions);
-// ^this is what's messing it up	
-#	var_dump($questions);
 	
 $keys = array_rand($questions,$n);
-	
-	var_dump($keys);
 
-	
-#	var_dump($questions);
 	
 $i = 0;
 
