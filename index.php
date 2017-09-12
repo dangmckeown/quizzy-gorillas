@@ -7,7 +7,7 @@
 		<style>
 			body, li {font-size: 14pt;}
 			li { padding-bottom: 3px; }
-		<style>
+		</style>
 	</head>
 	<body>
 	
