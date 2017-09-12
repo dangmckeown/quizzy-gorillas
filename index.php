@@ -17,7 +17,7 @@
 		<center>
 			<h1>Quizzy Gorillas</h1>
 			<h2>When you absolutely *positively* need to know what happened on this day in history</h2>
-			<img style="width: 300px;" alt="thoughtful-looking gorilla" src="https://cdn.pixabay.com/photo/2017/03/03/16/46/gorilla-2114399_960_720.jpg" />
+			<img style="width: 300px;" alt="thoughtful-looking gorilla" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Gorilla_port_lympne1.jpg" />
 		</center>
 		
 	
