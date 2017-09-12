@@ -4,6 +4,10 @@
 	<head>
 		<title>Quizzy Gorillas - for when you absolutely *positively* need to know what happened on this day in history</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body, li {font-size: 14pt;}
+			li { padding-bottom: 3px; }
+		<style>
 	</head>
 	<body>
 	
