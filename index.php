@@ -5,11 +5,21 @@
 		<title>Quizzy Gorillas - for when you absolutely *positively* need to know what happened on this day in history</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style>
-			body, li {font-size: 14pt;}
+			body {font-family: 'Arial Narrow';} 
+			li {font-size: 14pt;}
 			li { padding-bottom: 3px; }
+			h1 {font-size: 18pt; font-weight: bold;}
+			h2 {font-size: 16pt; font-weight: normal;}
 		</style>
 	</head>
 	<body>
+		
+		<center>
+			<h1>Quizzy Gorillas</h1>
+			<h2>When you absolutely *positively* need to know what happened on this day in history</h2>
+			<img style="width: 300px;" alt="thoughtful-looking gorilla" src="https://cdn.pixabay.com/photo/2017/03/03/16/46/gorilla-2114399_960_720.jpg" />
+		</center>
+		
 	
 <?php
 
