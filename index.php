@@ -99,7 +99,7 @@ $i++;
 
 } //end foreach
 
-$bc = "/^B\.?C\.?/i";
+$bc = "/^\W*B\.?C\.?/i";
 
 $events = array();
 
