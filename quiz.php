@@ -1,5 +1,7 @@
-<div style="font-size: 16pt;">
+<div style="font-size: 14pt; font-family: 'Arial Narrow'">
 
+  <p style="font-weight: bold;">Quiz, you scurvy apes</p>
+  
 <?
 
 include_once('functions.php');
