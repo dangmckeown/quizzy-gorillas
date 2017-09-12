@@ -1,4 +1,6 @@
-<div style="font-size: 16pt;">
+<div style="font-size: 14pt; font-family: 'Arial Narrow'">
+
+  <p style="font-weight: bold;">Answers</p>
 
 <?
 
@@ -17,22 +19,21 @@ if ($questions[$q][0]){
 
 echo "<p>" . $questions[$q][0] . "<br/>";
 if ($questions[$q][1] == $ans){
-echo "<span style='color: green;'>$ans is correct!</span>";
+echo "<span style='color: green;'>&star; $ans is correct!</span>";
 $total_score++;
 }
 else
 {
-echo "<span style='color: red;'>The correct answer is " . $questions[$q][1] . ".</span> (Your answer: $ans.)";
+echo "<span style='color: red;'><b>&times;</b> The correct answer is " . $questions[$q][1] . ".</span> (Your answer: $ans.)";
 }
 
 } //end total score catcher
 
-# $possible_score = count($_POST) - 1;
 echo "</p>";
 }
 
 
-echo "<p>You scored $total_score out of $possible_score</p>";
+echo "<p><b>You scored $total_score out of $possible_score</b></p>";
 
 echo "<p><a href=\"quiz.php\">Give me another go</a></p>";
 
