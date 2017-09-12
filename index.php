@@ -147,7 +147,7 @@ sort($events);
 
       
 foreach ($bc_events as $event){
-echo "<li>" . $event['year'] . BC": " . $event['event']  . "</li>";
+echo "<li>" . $event['year'] . "BC": " . $event['event']  . "</li>";
 } //end foreach bc_events
 
    
