@@ -127,7 +127,8 @@ if ($year && preg_match("/\d/",$textarr[$i])){
 } //end for i
 	
 if(preg_match($bc, $split[1])){
-$bc_events[] = array('year' => $split[0], 'event' => preg_replace($bc,"",trim($split[1])));
+preg_replace($bc,"",$split[1]);
+$bc_events[] = array('year' => $split[0], 'event' => trim($split[1]));
 } //end if BC
     
 else
