@@ -130,6 +130,9 @@ if(! preg_match($has_tags, $textarr)){
 	$split[1] = strip_tags(implode($textarr));
 }//end if !preg_match
 else{
+//reassemble string, strip tags and dismantle again
+$textarr = str_split(strip_tags($consolid));
+	
 $year = True;
 
 	
