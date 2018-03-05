@@ -83,9 +83,7 @@ $wiki_trim = explode("<li>",str_replace(" – "," ", $ws[0]));
 
 $brit_trim = explode("<p>",$brits);
 		
-		echo "<p>";
-		print_r($brit_trim);
-		echo "</p>";
+	
 
 //== Consolidate and order sources
 
@@ -114,11 +112,6 @@ foreach ($consolids as $consolid){
 $split=array();
 	
 $textarr = str_split($consolid);
-
-//ditch strip_tags
-//add in below if necessary
-	
-var_dump($textarr);	
 	
 $has_tags = "/^</";
 
@@ -132,13 +125,9 @@ if(! preg_match($has_tags, $textarr)){
 else{
 //reassemble string, strip tags and dismantle again
 $textarr = str_split(strip_tags($consolid));
-	
+	print_r($textarr);
 $year = True;
-
-	
-	
 for($i = 0;$i < count($textarr);$i++){
-
 if ($year && preg_match("/\d/",$textarr[$i])){
 	$split[0] .= $textarr[$i];
 } //end if
@@ -167,15 +156,6 @@ rsort($bc_events);
 
 
 sort($events);
-
-
-echo "BC EVENTS:";
-
-print_r($bc_events);
-
-echo "AD EVENTS:";
-
-print_r($events);
 		
 echo "<ul>";
       
