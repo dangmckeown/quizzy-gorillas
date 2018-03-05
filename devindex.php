@@ -125,6 +125,7 @@ if(! preg_match($has_tags, $textarr)){
 else{
 //reassemble string, strip tags and dismantle again
 $textarr = str_split(strip_tags($consolid));
+	print_r($textarr);
 	
 	while(preg_match("/\d/",$textarr[0])){
 	$leaddig = array_shift($textarr);
