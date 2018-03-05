@@ -77,7 +77,7 @@ $wis = explode("<span class=\"mw-headline\" id=\"Events\">Events</span>",$wiks[1
 
 $ws = explode("<span class=\"mw-headline\" id=\"Births\">Births</span>",$wis[1]);
 
-$wiki_trim = strip_tags(explode("<li>",str_replace(" – "," ", $ws[0])));
+$wiki_trim = explode("<li>",str_replace(" – "," ", $ws[0]));
 
 //== Trim Beautiful Britain Output
 
