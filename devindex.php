@@ -116,11 +116,24 @@ $split=array();
 $textarr = str_split($consolid);
 
 //ditch strip_tags
+//add in below if necessary
 	
 var_dump($textarr);	
 	
+$has_tags = "/^</";
+
+if(! preg_match($has_tags, $textarr)){
+	while(preg_match("/\d/",$textarr[0]){
+	$leaddig = array_shift($textarr);
+	$split[0] .= $leaddig;
+	} //end while
+	$split[1] = strip_tags(implode($textarr));
+}//end if !preg_match
+else{
 $year = True;
 
+	
+	
 for($i = 0;$i < count($textarr);$i++){
 
 if ($year && preg_match("/\d/",$textarr[$i])){
@@ -133,6 +146,8 @@ if ($year && preg_match("/\d/",$textarr[$i])){
 } //end else number
 
 } //end for i
+	
+}//end else $!has_tags
 	
 if(preg_match($bc, $split[1])){
 $bc_events[] = array('year' => $split[0], 'event' => preg_replace($bc,"",trim($split[1])));
