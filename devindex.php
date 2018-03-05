@@ -115,6 +115,8 @@ $split=array();
 	
 $textarr = str_split(strip_tags($consolid));
 
+var_dump($textarr);	
+	
 $year = True;
 
 for($i = 0;$i < count($textarr);$i++){
