@@ -85,8 +85,6 @@ foreach ($wiki_trim as $trim){
 //== Trim Beautiful Britain Output
 
 $brit_trim = explode("<p>",$brits);
-		
-	
 
 //== Consolidate and order sources
 
@@ -96,7 +94,6 @@ foreach ($sources as $source){
 		
 $consolids = array();
 
-foreach ($sources as $source){
 $i = 1;
 
 while($i < count($source) - 1){
