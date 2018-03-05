@@ -113,8 +113,10 @@ foreach ($consolids as $consolid){
 
 $split=array();
 	
-$textarr = str_split(strip_tags($consolid));
+$textarr = str_split($consolid);
 
+//ditch strip_tags
+	
 var_dump($textarr);	
 	
 $year = True;
