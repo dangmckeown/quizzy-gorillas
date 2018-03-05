@@ -125,16 +125,11 @@ if(! preg_match($has_tags, $textarr)){
 else{
 //reassemble string, strip tags and dismantle again
 $textarr = str_split(strip_tags($consolid));
-	print_r($textarr);
-$year = True;
-for($i = 0;$i < count($textarr);$i++){
-if ($year && preg_match("/\d/",$textarr[$i])){
-	$split[0] .= $textarr[$i];
-} //end if
- else
-    {
-	$year = False;
-		$split[1] .= $textarr[$i];
+	while(preg_match("/\d/",$textarr[0])){
+	$leaddig = array_shift($textarr);
+	$split[0] .= $leaddig;
+	} //end while
+	$split[1] = strip_tags(implode($textarr));
 } //end else number
 
 } //end for i
