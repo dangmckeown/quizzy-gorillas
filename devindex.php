@@ -93,9 +93,6 @@ $brit_trim = explode("<p>",$brits);
 $sources = ([$bbc_trim, $wiki_trim, $brit_trim]);
 
 foreach ($sources as $source){
-print_r($source);
-	echo "<p />";
-}		
 		
 $consolids = array();
 
@@ -155,7 +152,6 @@ $events[] = array('year' => $split[0], 'event' => $split[1]);
 
 rsort($bc_events);
 
-
 sort($events);
 		
 echo "<ul>";
@@ -172,6 +168,8 @@ echo "</ul>";
 
 echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
 
-
 ?>
-	</body></html>
+
+</body>
+
+</html>
