@@ -82,6 +82,10 @@ $wiki_trim = explode("<li>",str_replace(" – "," ", $ws[0]));
 //== Trim Beautiful Britain Output
 
 $brit_trim = explode("<p>",$brits);
+		
+		echo "<p>";
+		print_r($brit_trim);
+		echo "</p>";
 
 //== Consolidate and order sources
 
