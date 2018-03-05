@@ -119,7 +119,7 @@ foreach ($consolids as $consolid){
 
 $split=array();
 	
-$textarr = str_split($consolid);
+$textarr = str_split(strip_tags($consolid));
 	
 $has_tags = "/^</";
 
