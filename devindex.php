@@ -89,6 +89,11 @@ $brit_trim = explode("<p>",$brits);
 
 $sources = ([$bbc_trim, $wiki_trim, $brit_trim]);
 
+foreach ($sources as $source){
+print_r($source);
+	echo "<p />";
+}		
+		
 $consolids = array();
 
 foreach ($sources as $source){
