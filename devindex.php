@@ -125,15 +125,12 @@ if(! preg_match($has_tags, $textarr)){
 else{
 //reassemble string, strip tags and dismantle again
 $textarr = str_split(strip_tags($consolid));
+	
 	while(preg_match("/\d/",$textarr[0])){
 	$leaddig = array_shift($textarr);
 	$split[0] .= $leaddig;
 	} //end while
-	$split[1] = strip_tags(implode($textarr));
-} //end else number
-
-} //end for i
-	
+		
 }//end else $!has_tags
 	
 if(preg_match($bc, $split[1])){
