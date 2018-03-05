@@ -123,7 +123,7 @@ var_dump($textarr);
 $has_tags = "/^</";
 
 if(! preg_match($has_tags, $textarr)){
-	while(preg_match("/\d/",$textarr[0]){
+	while(preg_match("/\d/",$textarr[0])){
 	$leaddig = array_shift($textarr);
 	$split[0] .= $leaddig;
 	} //end while
