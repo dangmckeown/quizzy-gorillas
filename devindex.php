@@ -142,16 +142,16 @@ rsort($bc_events);
 
 sort($events);
 
- echo "<ul>";
 
 echo "BC EVENTS:";
 
 print_r($bc_events);
 
-echo "AD EVENTS:£;
+echo "AD EVENTS:";
 
 print_r($events);
-
+		
+echo "<ul>";
       
 foreach ($bc_events as $event){
 echo "<li>" . $event['year'] . " BC: " . $event['event']  . "</li>";
