@@ -68,7 +68,7 @@ $consolids = array();
 foreach ($sources as $source){
 $i = 1;
 while($i < count($source) - 1){
-$consolids[] = $source[$i];
+$consolids[] = strip_tags($source[$i]);
 $i++;
 } //end while i
 } //end foreach
@@ -81,3 +81,7 @@ foreach($consolids as $consolid){
 $plains[] = strip_tags($consolid);
 }
 		print_r($plains);
+		
+		?>
+		
+		DANG
