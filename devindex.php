@@ -72,56 +72,5 @@ $consolids[] = $source[$i];
 $i++;
 } //end while i
 } //end foreach
-$bc = "/^\W*B\.?C\.?/i";
-$events = array();
-$bc_events = array();
-foreach ($consolids as $consolid){
-$split=array();
-	
-$textarr = str_split(strip_tags($consolid));
-	
-$has_tags = "/^</";
-if(! preg_match($has_tags, $textarr)){
-	while(preg_match("/\d/",$textarr[0])){
-	$leaddig = array_shift($textarr);
-	$split[0] .= $leaddig;
-	} //end while
-	$split[1] = strip_tags(implode($textarr));
-}//end if !preg_match
-else{
-//reassemble string, strip tags and dismantle again
-$textarr = str_split(strip_tags($consolid));
-	print_r($textarr);
-	
-	while(preg_match("/\d/",$textarr[0])){
-	$leaddig = array_shift($textarr);
-	$split[0] .= $leaddig;
-	} //end while
 		
-}//end else $!has_tags
-	
-if(preg_match($bc, $split[1])){
-$bc_events[] = array('year' => $split[0], 'event' => preg_replace($bc,"",trim($split[1])));
-} //end if BC
-    
-else
-{
-$events[] = array('year' => $split[0], 'event' => $split[1]);
-} //end if else BC
-} //end foreach consolids
-rsort($bc_events);
-sort($events);
-		
-echo "<ul>";
-      
-foreach ($bc_events as $event){
-echo "<li>" . $event['year'] . " BC: " . $event['event']  . "</li>";
-} //end foreach bc_events
-   
-foreach ($events as $event){
-echo "<li>" . $event['year'] . ": " . $event['event']  . "</li>";
-} //end foreach events
-echo "</ul>";
-echo "<p><a href='quiz.php'>Take a general knowledge quiz</a></p>";
-?>
-	</body></html>
+print_r($consolids);
