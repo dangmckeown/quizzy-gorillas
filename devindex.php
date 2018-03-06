@@ -72,6 +72,8 @@ $consolids[] = strip_tags($source[$i]);
 $i++;
 } //end while i
 } //end foreach
+		
+		print_r($consolids);
 
 $bcevents=array();
 $adevents = array();		
