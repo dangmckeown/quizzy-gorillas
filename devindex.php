@@ -65,7 +65,7 @@ if(preg_match("/<br\s\/>/",$brit)){
 $temp = explode("<br />",$brit);
 var_dump($temp);
 foreach($temp as $tmp){
-if(preg_match("/^\d/",$tmp))		{
+if(preg_match("/^(\s)?\d/",$tmp))		{
 $brit_trim[] = $tmp;
 }//end if preg_match
 }//end foreach temp
