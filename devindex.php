@@ -75,7 +75,7 @@ $i++;
 
 $bcevents=array();
 $adevents = array();		
-bcpreg = "/^(.{1,2})?b\.?c/i";
+$bcpreg = "/^(.{1,2})?b\.?c/i";
 foreach($consolids as $consolid){
 $text = str_split($consolid);
 //div up into year and event	
