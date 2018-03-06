@@ -74,3 +74,10 @@ $i++;
 } //end foreach
 		
 print_r($consolids);
+		
+$plains = array();
+		
+foreach($consolids as $consolid){
+$plains[] = strip_tags($consolid);
+}
+		print_r($plains);
