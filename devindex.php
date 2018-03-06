@@ -72,16 +72,46 @@ $consolids[] = strip_tags($source[$i]);
 $i++;
 } //end while i
 } //end foreach
-		
-print_r($consolids);
-		
-$plains = array();
-		
+
+$bcevents=array();
+$adevents = array();		
+bcpreg = "/^(.{1,2})?b\.?c/i";
 foreach($consolids as $consolid){
-$plains[] = strip_tags($consolid);
+$text = str_split($consolid);
+//div up into year and event	
+$year = "";
+
+$i = 0;
+while(is_int($text[0]) && $i < 4){
+	$leaddig = array_shift($text);
+	$year .= $leaddig;
+	$i++;
 }
-		print_r($plains);
-		
+$event = implode($text);
+	
+if(preg_match($bcpreg,$event)){
+	$bcevents[] = ([$year, preg_replace($bcevent,"",$event)]);
+}
+else
+{
+	$adevents[] = ([$year, $event]);
+}
+}
+
+rsort($bcevents);
+sort($adevents);
+echo "<ul>";
+foreach($bcevents as $bc){
+ echo "<li>{$bc[0]} BC: {$bc[1]}</li>";
+}
+
+foreach($adevents as $ad){
+ echo "<li>{$ad[0]}: {$ad[1]}</li>";
+}		
+
+echo "</ul>";
 		?>
+<p><a href="quiz.php">Take a general knowledge quiz</a></p>
 		
-		DANG
+	</body>
+</html>
