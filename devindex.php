@@ -62,13 +62,15 @@ $brit_trim = explode("<p>",$brits);
 
 foreach($brit_trim as $brit){
 if(preg_match("/<br\s\/>/",$brit)){
-	echo "CAUGHT $brit<br />";
- $temp = explode("<br />",$brit);
-unset($brit);
+$temp = explode("<br />",$brit);
+var_dump($temp);
 foreach($temp as $tmp){
+if(preg_match("/^\d/",$tmp))		{
 $brit_trim[] = $tmp;
+}//end if preg_match
 }//end foreach temp
 unset($temp);
+unset($brit);
 }//end if preg_match
 } //end foreach brit_trim
 		
