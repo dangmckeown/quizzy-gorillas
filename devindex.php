@@ -82,7 +82,7 @@ $text = str_split($consolid);
 $year = "";
 
 $i = 0;
-while(is_int($text[0]) && $i < 4){
+while(preg_match("/\d/",$text[0]) && $i < 4){
 	$leaddig = array_shift($text);
 	$year .= $leaddig;
 	$i++;
