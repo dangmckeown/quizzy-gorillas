@@ -59,6 +59,17 @@ foreach ($wiki_trim as $trim){
 }
 //== Trim Beautiful Britain Output
 $brit_trim = explode("<p>",$brits);
+
+foreach($brit_trim as $brit){
+if(preg_match("/<br\s\/>/",$brit){
+ $temp = explode("<br />",$brit);
+unset($brit);
+foreach($temp as $tmp){
+$brit_trim[] = $tmp;
+}//end foreach temp
+unset($temp);
+}//end if preg_match
+} //end foreach brit_trim
 		
 	
 //== Consolidate and order sources
