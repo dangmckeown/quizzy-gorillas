@@ -17,18 +17,23 @@ $months = array(
 12 => 'december'
 );
 
-$month = (int)date("m");
+$month = date("m");
 
-for ($i = $month; $i <=12; $i++){
+for ($i = (int)$month; $i <=12; $i++){
 
 $fh = file_get_contents('http://www.fellrunner.org.uk/races.php?m=' . $months[$i] .'&y=2018');
 
+  echo $fh;
+ 
+/*
 $array1 = explode('<table id="posts-table">', $fh);
 
 $array2 = explode('</div>'$array1[1]);
 
 echo "<table>";
 
-echo $array2[0];
+echo $array2[0]; */
+  
+  
 
 }
